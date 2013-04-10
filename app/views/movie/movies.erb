@@ -1,4 +1,6 @@
+<%= render 'movie/form' %>
 
+<div class="details_page">
 <h2> <%= @result["Title"] %> 
 (<%= @result["Year"] %>) </h2>
 
@@ -39,17 +41,17 @@
     IMDB Rating
   </dt>
   <dd>
-    <%= @result["imdbRating"] %>
+    <%= "*" * @result["imdbRating"].to_f.round  %>
   </dd>
   <dt>
     Rotten Tomatoes Rating
   </dt>
   <dd>
-    <%= @result["tomatoRating"] %>
+    <%= "*" * @result["tomatoRating"].to_f.round %>
   </dd>
     <dt>
-      <%= "Actor" if @directors.size == 1%>
-      <%= "Actors" if @directors.size > 1%>
+      <%= "Actor" if @actors.size == 1%>
+      <%= "Actors" if @actors.size > 1%>
   </dt>
   <dd>
     <ul>
@@ -75,3 +77,4 @@
 <br>
 <a href="/search?q=<%= @query %>"> Back to search results for <%= @query %> </a>
 
+</div>

@@ -1,18 +1,23 @@
+<div class="search">
+
+<%= render 'movie/form' %>
+
 <h2>
-  <% if @results.empty?%>
+  <% if @results.nil?%>
   No search results found
   <% else %>
   Search results
   <% end %>
   for <q><%= @query %></q>
 </h2>
-<% if !@results.empty? %>
-<ol>
+<% if !@results.nil? %>
+
   <% @results.each do |result| %>
-    <li>
+    <p>
       <a href="/movies?id=<%= result["imdbID"] %>&amp;q=<%= URI.escape(@query) %>"><%= result["Title"] %></a>
       (<%= result["Year"]%>)
-    </li>
+    </p>
   <% end %>
-</ol>
+
 <% end %>
+</div>

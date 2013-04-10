@@ -4,14 +4,10 @@
 
 body {
   background: black;
-  color: white;
+  color: #BDE2FF;
 }
 
-h2 {
-/*  text-align: center;*/
-}
-
-.poster, .details {
+.poster, .details, img {
   width: 300px;
   display: inline-block;
 }
@@ -20,11 +16,36 @@ h2 {
   margin-right: 50px;
 }
 
+.details_page {
+  width: 675px;
+  margin: auto;
+}
+
 a {
   text-decoration: none;
-  color: #00f;
+  color: #6464FF;
 }
 
 dt {
-  color: gray;
+  color: #e0bc9f;
+}
+
+form, h1, h2, p {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Lobster Two', cursive;
+  font-size: 50pt;
+  color: #D73C3C;
+}
+
+h2 {
+  font-family: 'Lobster Two', cursive;
+  color: #e0bc9f;
+}
+
+.search {
+  width: 400px;
+  margin: auto;
 }
